@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
+echo START $0 SCRIPT
 #sample key to test all works
 vault kv put kv/key value=value
 vault kv get kv/key
@@ -15,3 +16,5 @@ vault kv get kv/pass
 
 # we call our legacy app
 envconsul  -vault-renew-token=false -secret kv/key -secret kv/user -secret kv/pass ./legacyapp.sh
+
+echo END $0 SCRIPT
