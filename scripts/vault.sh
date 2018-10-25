@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 if [ -d /vagrant ]; then
+  mkdir /vagrant/logs
   LOG="/vagrant/logs/vault_${HOSTNAME}.log"
 else
   LOG="vault.log"
